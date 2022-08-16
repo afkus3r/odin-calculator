@@ -58,7 +58,7 @@ function percentage() {
   percent.addEventListener("click", () => {
     if (Number(p.textContent)) {
       result = divide(Number(p.textContent), 100);
-      p.textContent = result;
+      p.textContent = limitLength(result);
     }
   });
 }
@@ -67,7 +67,7 @@ function convertSign() {
   sign.addEventListener("click", () => {
     if (Number(p.textContent)) {
       result = multiply(Number(p.textContent), -1);
-      p.textContent = result;
+      p.textContent = limitLength(result);
     }
   });
 }
